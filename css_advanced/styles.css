@@ -106,4 +106,93 @@ section.quote-section {
   margin: 3rem auto;
   padding: 2rem 1rem;
   background-color: #f0f8ff; /* Alice Blue */
-  border-radius:
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+section.quote-section > div:first-child img {
+  width: 150px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+section.quote-section > div:last-child {
+  flex: 1;
+  color: #003366;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+section.quote-section blockquote {
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+  color: #004080;
+  border-left: 5px solid #0077cc;
+}
+
+section.quote-section blockquote::before {
+  content: "“";
+  font-size: 3.5rem;
+  color: #0077cc;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  font-weight: bold;
+  font-family: serif;
+  line-height: 1;
+}
+
+section.quote-section cite {
+  display: block;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #00509e;
+}
+
+section.quote-section p {
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.5;
+}
+
+/* Videos List Section Styling */
+section.videos-list {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+section.videos-list > h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Container for all video blocks */
+section.videos-list > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Each video block styling */
+section.videos-list > div > div {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  display: flex;
+  flex-direction: column
