@@ -1,0 +1,25 @@
+# Node modules (if any, though not used here)
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# MacOS folder attributes
+.AppleDouble
+.LSOverride
+
+# npm debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional: Ignore environment files if any
+.env
