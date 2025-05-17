@@ -88,5 +88,3 @@ This project is licensed under the MIT License.
 ## Author
 
 Made by **Monica Dhieu**
-
-```
