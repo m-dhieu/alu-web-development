@@ -1,2 +1,47 @@
 /* styles.css - your custom styles */
-/* You can add custom styles here to override or extend base.css */
+/* Add custom styles here to override or extend base.css */
+
+/* Make body a flex container with column direction */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* full viewport height to allow scrolling inside article and aside */
+  margin: 0; /* reset default margin */
+}
+
+/* Make main a flex container with row direction */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto; /* allow main to grow and shrink automatically */
+  overflow: hidden; /* prevent main from overflowing its container */
+}
+
+/* article takes 2/3 of the width */
+article {
+  flex: 2;
+  overflow-y: auto; /* vertical scroll if content overflows */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* aside takes 1/3 of the width */
+aside {
+  flex: 1;
+  overflow-y: auto; /* vertical scroll if content overflows */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Optional: make header and footer stand out */
+header, footer {
+  flex-shrink: 0; /* prevent shrinking */
+  padding: 1rem;
+  background-color: #222;
+  color: white;
+}
+
+/* Optional: ensure header and footer span full width */
+header, footer {
+  width: 100%;
+}
