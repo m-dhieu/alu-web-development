@@ -1,132 +1,126 @@
-/* CSS Reset (simplified) */
+/* styles.css */
+
+/* Reset and base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body and base font */
 body {
   font-family: 'Source Sans Pro', Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fff;
-  padding: 1rem;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.5;
 }
 
-/* Header */
+/* Header styling */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
-  border-bottom: 1px solid #ccc;
+  padding: 20px 40px;
+  background-color: #003366; /* Example from Figma: dark blue */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header a {
+  text-decoration: none;
+  color: white;
 }
 
 header a img {
-  max-height: 60px;
+  height: 60px; /* Adjust to match Figma */
 }
 
 /* Navigation */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 30px;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: #0077cc;
   font-weight: 600;
-}
-
-nav ul li a:hover {
-  color: #005fa3;
-}
-
-/* Main sections */
-main section {
-  margin: 2rem 0;
-}
-
-/* Headings */
-h1, h2, h3, h4 {
-  margin-bottom: 0.5rem;
-  color: #003366;
-}
-
-/* Paragraphs */
-p {
-  margin-bottom: 1rem;
-}
-
-/* Buttons */
-button {
-  background-color: #0077cc;
-  border: none;
-  color: white;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 4px;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
+  color: white;
+  transition: color 0.3s ease;
 }
 
-button:hover {
-  background-color: #005fa3;
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #ffcc00; /* Accent color from Figma */
 }
 
-/* Footer */
-footer {
-  border-top: 1px solid #ccc;
-  padding: 1rem 0;
+/* Banner Section (first section inside main) */
+main section:first-of-type {
+  background: linear-gradient(135deg, #004080, #0066cc); /* Example gradient from Figma */
+  color: white;
+  padding: 80px 40px;
   text-align: center;
-  color: #666;
-  font-size: 0.9rem;
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 10px 30px rgba(0, 102, 204, 0.3);
 }
 
-/* Social links in footer */
-footer .social-links a img {
-  width: 24px;
-  margin: 0 0.5rem;
-  vertical-align: middle;
+main section:first-of-type h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
-/* Images in content */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+main section:first-of-type p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
-/* Simple grid for blocks inside sections */
-section > div > div {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-section > div > div > div {
-  flex: 1 1 200px;
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 6px;
-  background-color: #f9f9f9;
-}
-
-/* Quote block */
-blockquote {
-  font-style: italic;
-  border-left: 4px solid #0077cc;
-  padding-left: 1rem;
-  margin-bottom: 0.5rem;
-  color: #555;
-}
-
-cite {
-  display: block;
-  text-align: right;
-  font-weight: bold;
-  margin-bottom: 1rem;
+main section:first-of-type button {
+  background-color: #ffcc00;
   color: #003366;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 204, 0, 0.5);
+}
+
+main section:first-of-type button:hover,
+main section:first-of-type button:focus {
+  background-color: #e6b800;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  main section:first-of-type {
+    padding: 60px 20px;
+  }
+
+  main section:first-of-type h1 {
+    font-size: 2.2rem;
+  }
+
+  main section:first-of-type p {
+    font-size: 1rem;
+  }
 }
