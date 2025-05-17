@@ -106,20 +106,4 @@ section.quote-section {
   margin: 3rem auto;
   padding: 2rem 1rem;
   background-color: #f0f8ff; /* Alice Blue */
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-section.quote-section > div:first-child img {
-  width: 150px;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  flex-shrink: 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-section.quote-section > div:last-child {
+  border-radius:
