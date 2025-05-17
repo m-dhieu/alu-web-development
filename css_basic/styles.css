@@ -3,6 +3,86 @@
 
 /* styles.css - custom styles including responsive layout */
 
+/* Logo styling */
+.logo {
+  font-size: 2rem;       /* bigger size to stand out */
+  padding-right: 1rem;   /* space after the logo */
+  user-select: none;     /* prevent text selection */
+  display: flex;
+  align-items: center;   /* vertically center if needed */
+}
+
+/* Style header navigation links */
+header ul li a {
+  color: #ffcc00;        /* golden yellow links */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+  color: #ffffff;        /* white on hover */
+}
+
+/* Style the header background */
+header {
+  background-color: #003366; /* dark blue */
+  padding: 1rem 2rem;
+}
+
+/* Style footer */
+footer {
+  background-color: #003366;
+  color: #ddd;
+  font-style: italic;
+  padding: 1rem 2rem;
+}
+
+/* Style article content */
+article {
+  font-family: 'Georgia', serif;
+  color: #222;
+  background-color: #f0f8ff; /* Alice Blue */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Style headings inside article */
+article h1 {
+  color: #003366;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 0.3rem;
+}
+
+article h2 {
+  color: #00509e;
+}
+
+article h3 {
+  color: #0077cc;
+}
+
+/* Style links inside article */
+article a {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+article a:hover {
+  color: #004080;
+}
+
+/* Style the aside */
+aside {
+  background-color: #e6f0ff;
+  border-left: 3px solid #003366;
+  padding: 1rem;
+  font-style: italic;
+  color: #555;
+}
+
 /* Flexbox layout */
 body {
   display: flex;
