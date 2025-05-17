@@ -1,47 +1,58 @@
 /* styles.css - your custom styles */
 /* Add custom styles here to override or extend base.css */
 
-/* Make body a flex container with column direction */
+/* styles.css - custom styles including responsive layout */
+
+/* Flexbox layout */
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* full viewport height to allow scrolling inside article and aside */
-  margin: 0; /* reset default margin */
+  height: 100vh;
+  margin: 0;
 }
 
-/* Make main a flex container with row direction */
 main {
   display: flex;
   flex-direction: row;
-  flex: auto; /* allow main to grow and shrink automatically */
-  overflow: hidden; /* prevent main from overflowing its container */
+  flex: auto;
+  overflow: hidden;
 }
 
-/* article takes 2/3 of the width */
 article {
   flex: 2;
-  overflow-y: auto; /* vertical scroll if content overflows */
+  overflow-y: auto;
   padding: 1rem;
   box-sizing: border-box;
 }
 
-/* aside takes 1/3 of the width */
 aside {
   flex: 1;
-  overflow-y: auto; /* vertical scroll if content overflows */
+  overflow-y: auto;
   padding: 1rem;
   box-sizing: border-box;
 }
 
-/* Optional: make header and footer stand out */
 header, footer {
-  flex-shrink: 0; /* prevent shrinking */
+  flex-shrink: 0;
   padding: 1rem;
   background-color: #222;
   color: white;
+  width: 100%;
 }
 
-/* Optional: ensure header and footer span full width */
-header, footer {
+/* Responsive behavior triggered by works_on_smartphone class */
+body.works_on_smartphone main {
+  flex-direction: column;
+}
+
+body.works_on_smartphone article,
+body.works_on_smartphone aside {
+  flex: none; /* reset flex sizing */
   width: 100%;
+  height: 50vh; /* half viewport height for scrolling */
+}
+
+/* Optional: spacing between article and aside on small screens */
+body.works_on_smartphone aside {
+  margin-top: 1rem;
 }
